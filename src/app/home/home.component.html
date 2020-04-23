@@ -1,4 +1,4 @@
-<div class="card shadow">
+<div class="card">
   <div class="card-body shadow">
     <h3 class="card-title">COVID 19 STATUS INDIA</h3>
     <p class="card-text">Coronavirus disease (COVID-19) is an infectious disease caused by a newly discovered coronavirus.
@@ -8,6 +8,7 @@
     </div>
   <div style="margin-top:1rem;">
 <ngx-charts-number-card 
+(window:resize)="onResize($event)"
   [view]="view"
   scheme="fire"
   [results]="single"

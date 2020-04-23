@@ -5,6 +5,7 @@
     <div>
     
       <ngx-charts-pie-grid class="ngx-charts" style="background-color:#1b1e27;"
+      (window:resize)="onResize($event)"
         [view]="view"
         scheme="neons"
         [results]="single"

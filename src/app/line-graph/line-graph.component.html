@@ -4,8 +4,11 @@
 </div>
 <div>
 <ngx-charts-line-chart class="ngx-charts" style="background-color: #1b1e27;"
+(window:resize)="onResize($event)"
   scheme="neons"
+  [view]="view"
   [legend]="legend"
+  legendPosition="below"
   [showXAxisLabel]="showXAxisLabel"
   [showYAxisLabel]="showYAxisLabel"
   [xAxis]="xAxis"

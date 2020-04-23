@@ -12,7 +12,7 @@ export class PieGraphComponent implements OnInit {
   ngOnInit(): void {
   }
   single: any[];
-  view: any[] = [600, 400];
+  view: any[] = [500, 400];
 
   // options
   showLegend: boolean = true;
@@ -29,4 +29,7 @@ export class PieGraphComponent implements OnInit {
   onSelect(event) {
     console.log(event);
   }
+  onResize(event) {
+    this.view = [event.target.innerWidth / 1.35, 400];
+}
 }

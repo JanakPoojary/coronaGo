@@ -12,7 +12,7 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
   }
   single: any[];
-  view: any[] = [500, 250];
+  view: any[] = [400, 250];
 
   colorScheme = {
     domain: ['#5AA454', '#E44D25', '#CFC0BB', '#7aa3e5', '#a8385d', '#aae3f5']
@@ -26,5 +26,8 @@ export class HomeComponent implements OnInit {
   onSelect(event) {
     console.log(event);
   }
+  onResize(event) {
+    this.view = [event.target.innerWidth / 1.35, 400];
+}
 
 }
