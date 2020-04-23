@@ -1,0 +1,43 @@
+<div class="mat-elevation-z8">
+  <div style="background-color: mediumspringgreen;">
+  <h3 class="text-center" style="padding:5px;margin:5px;color: #1b1e27;">State-wise stats</h3>
+  </div>
+  <table mat-table class="full-width-table" matSort aria-label="Elements" style="background-color: #1b1e27;">
+    <!-- Id Column -->
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Id</th>
+      <td mat-cell *matCellDef="let row">{{row.id}}</td>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="State">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>State</th>
+      <td mat-cell *matCellDef="let row">{{row.name}}</td>
+    </ng-container>
+    <ng-container matColumnDef="Total cases">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Total cases</th>
+      <td mat-cell *matCellDef="let row">{{row.tc}}</td>
+    </ng-container>
+    <ng-container matColumnDef="Total Deaths">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Total Deaths</th>
+      <td mat-cell *matCellDef="let row">{{row.td}}</td>
+    </ng-container>
+    <ng-container matColumnDef="Total Recovered">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Total Recovered</th>
+      <td mat-cell *matCellDef="let row">{{row.tr}}</td>
+    </ng-container>
+
+
+
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+
+  <mat-paginator #paginator style="background-color: #1b1e27;"
+      [length]="dataSource?.data.length"
+      [pageIndex]="0"
+      [pageSize]="50"
+      [pageSizeOptions]="[25, 50, 100, 250]">
+  </mat-paginator>
+</div>
