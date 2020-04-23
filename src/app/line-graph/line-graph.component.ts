@@ -24,8 +24,8 @@ export class LineGraphComponent implements OnInit {
   yAxis: boolean = true;
   showYAxisLabel: boolean = true;
   showXAxisLabel: boolean = true;
-  xAxisLabel: string = 'Year';
-  yAxisLabel: string = 'GDP';
+  xAxisLabel: string = 'Month';
+  yAxisLabel: string = 'Cases';
   timeline: boolean = true;
 
   colorScheme = {

@@ -1,126 +1,126 @@
 export var multi = [
     {
-      "name": "Congo",
+      "name": "Maharastra",
       "series": [
         {
-          "value": 2749,
-          "name": "2012"
+          "value": 0,
+          "name": "dec"
         },
         {
-          "value": 2448,
-          "name": "2013"
+          "value": 153,
+          "name": "jan"
         },
         {
-          "value": 4965,
-          "name": "2014"
+          "value": 751,
+          "name": "feb"
         },
         {
-          "value": 4843,
-          "name": "2015"
+          "value": 2459,
+          "name": "march"
         },
         {
-          "value": 2214,
-          "name": "2016"
+          "value": 5221,
+          "name": "apr"
         }
       ]
     },
     {
-      "name": "Tajikistan",
+      "name": "Gujarat",
       "series": [
         {
-          "value": 4892,
-          "name": "2012"
+          "value": 0,
+          "name": "dec"
         },
         {
-          "value": 5321,
-          "name": "2013"
+          "value": 53,
+          "name": "jan"
         },
         {
-          "value": 5419,
-          "name": "2014"
+          "value": 251,
+          "name": "feb"
         },
         {
-          "value": 3277,
-          "name": "2015"
+          "value": 859,
+          "name": "march"
         },
         {
-          "value": 4037,
-          "name": "2016"
+          "value": 2272,
+          "name": "apr"
         }
       ]
     },
     {
-      "name": "Mali",
+      "name": "Delhi",
       "series": [
         {
-          "value": 6752,
-          "name": "2012"
+          "value": 0,
+          "name": "dec"
         },
         {
-          "value": 5265,
-          "name": "2013"
+          "value": 153,
+          "name": "jan"
         },
         {
-          "value": 6944,
-          "name": "2014"
+          "value": 951,
+          "name": "feb"
         },
         {
-          "value": 4448,
-          "name": "2015"
+          "value": 1827,
+          "name": "march"
         },
         {
-          "value": 4038,
-          "name": "2016"
+          "value": 2156,
+          "name": "apr"
         }
       ]
     },
     {
-      "name": "South Africa",
+      "name": "Rajasthan",
       "series": [
         {
-          "value": 3905,
-          "name": "2012"
+          "value": 0,
+          "name": "dec"
         },
         {
-          "value": 2573,
-          "name": "2013"
+          "value": 73,
+          "name": "jan"
         },
         {
-          "value": 5018,
-          "name": "2014"
+          "value": 451,
+          "name": "feb"
         },
         {
-          "value": 2213,
-          "name": "2015"
+          "value": 859,
+          "name": "march"
         },
         {
-          "value": 2592,
-          "name": "2016"
+          "value": 1801,
+          "name": "apr"
         }
       ]
     },
     {
-      "name": "Vatican City",
+      "name": "Tamil Nadu",
       "series": [
         {
-          "value": 4905,
-          "name": "2012"
+          "value": 0,
+          "name": "dec"
         },
         {
-          "value": 2435,
-          "name": "2013"
+          "value": 33,
+          "name": "jan"
         },
         {
-          "value": 6945,
-          "name": "2014"
+          "value": 851,
+          "name": "feb"
         },
         {
-          "value": 3122,
-          "name": "2015"
+          "value": 1001,
+          "name": "march"
         },
         {
-          "value": 3834,
-          "name": "2016"
+          "value": 1596,
+          "name": "apr"
         }
       ]
     }

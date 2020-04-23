@@ -1,26 +1,26 @@
 export var single = [
     {
-      "name": "Germany",
-      "value": 8940000
+      "name": "Maharashtra",
+      "value": 5221
     },
     {
-      "name": "USA",
-      "value": 5000000
+      "name": "Gujarat",
+      "value": 2272
     },
     {
-      "name": "France",
-      "value": 7200000
+      "name": "Delhi",
+      "value": 2156
     },
     {
-      "name": "UK",
-      "value": 6200000
+      "name": "Rajasthan",
+      "value": 1801
     },
     {
-      "name": "Italy",
-      "value": 4200000
+      "name": "Tamil Nadu",
+      "value": 1596
     },
     {
-      "name": "Spain",
-      "value": 8200000
+      "name": "Madhya Pradesh",
+      "value": 1592
     }
   ];

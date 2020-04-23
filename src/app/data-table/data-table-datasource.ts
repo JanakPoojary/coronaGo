@@ -15,13 +15,13 @@ export interface DataTableItem {
 
 // TODO: replace this with real data from your application
 const EXAMPLE_DATA: DataTableItem[] = [
-  {id: 1, name: 'Gujarat', tc:1000, td:201, tr:851},
-  {id: 2, name: 'Delhi', tc:1000, td:201, tr:851},
-  {id: 3, name: 'Punjab', tc:1000, td:201, tr:851},
-  {id: 4, name: 'Kerala', tc:1000, td:201, tr:851},
-  {id: 5, name: 'Goa', tc:1000, td:201, tr:851},
-  {id: 6, name: 'UP', tc:1000, td:201, tr:851},
-  {id: 7, name: 'Bihar', tc:1000, td:201, tr:851},
+  {id: 1, name: 'Maha', tc:5221, td:251, tr:0},
+  {id: 2, name: 'Gujarat', tc:2272, td:95, tr:0},
+  {id: 3, name: 'Delhi', tc:2156, td:47, tr:0},
+  {id: 4, name: 'Rajthan', tc:1801, td:25, tr:0},
+  {id: 5, name: 'TN', tc:1596, td:18, tr:0},
+  {id: 6, name: 'MP', tc:1592, td:80, tr:0},
+  {id: 7, name: 'UP', tc:1412, td:21, tr:0},
   ];
 
 /**

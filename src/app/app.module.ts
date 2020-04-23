@@ -19,6 +19,7 @@ import { MatSortModule } from '@angular/material/sort';
 import { LineGraphComponent } from './line-graph/line-graph.component';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { PieGraphComponent } from './pie-graph/pie-graph.component';
+import { SocialComponent } from './social/social.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { PieGraphComponent } from './pie-graph/pie-graph.component';
     DataTableComponent,
     LineGraphComponent,
     PieGraphComponent,
+    SocialComponent,
     
   ],
   imports: [
