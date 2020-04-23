@@ -5,6 +5,7 @@ import { MainNavComponent } from './main-nav/main-nav.component';
 import { DataTableComponent } from './data-table/data-table.component';
 import { LineGraphComponent } from './line-graph/line-graph.component';
 import { PieGraphComponent } from './pie-graph/pie-graph.component';
+import { SocialComponent } from './social/social.component';
 
 
 const routes: Routes = [
@@ -13,7 +14,8 @@ const routes: Routes = [
     { path: 'dashboard', component: DataTableComponent},
     {path: '', component: LineGraphComponent, outlet:'line-graph'},
     {path: '', component: PieGraphComponent, outlet:'pie-graph'},
-    {path: '', component: HomeComponent, outlet:'entry'}
+    {path: '', component: HomeComponent, outlet:'entry'},
+    {path: '', component: SocialComponent, outlet:'social'},
   ]},
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: '**', redirectTo: 'home', pathMatch: 'full' }
