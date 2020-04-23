@@ -8,7 +8,10 @@ import { Component, OnInit } from '@angular/core';
 export class SocialComponent implements OnInit {
 
   constructor() { }
-
+  ngAfterViewInit(): void {
+    // @ts-ignore
+    twttr.widgets.load();
+}
   ngOnInit(): void {
   }
 
