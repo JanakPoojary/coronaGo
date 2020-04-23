@@ -11,7 +11,7 @@
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
-    <mat-toolbar color="primary">
+    <!-- <mat-toolbar color="primary">
       <button
         type="button"
         aria-label="Toggle sidenav"
@@ -21,24 +21,36 @@
         <mat-icon aria-label="Side nav toggle icon">CoronaGo</mat-icon>
       </button>
       <span>COVID-19 India</span>
-    </mat-toolbar>
-    <!-- Add Content Here -->
-    <div class="container">
+    </mat-toolbar> -->
+    <!-- Add Content Here --> 
+    
+
+    <div class="container-fluid home-entry">
+      <div>
       <div class="row">
-        <div class="col">
+        <router-outlet name="entry"></router-outlet>
+      </div>
+      </div>
+      <div class="container design">
+        <div class="row">
+          <h2>STATISTICS</h2>
+        </div>
+      <div class="row">
+        <div class="col shadow">
           <router-outlet></router-outlet>
         </div>
-        <div class="col">
+        <div class="col shadow">
           <router-outlet name="line-graph"></router-outlet>
         </div>
       </div>
       <div class="row">
-        <div class="col">
+        <div class="col shadow">
           <router-outlet name="map"></router-outlet>
         </div>
-        <div class="col">
+        <div class="col shadow">
           <router-outlet name="pie-graph"></router-outlet>
         </div>
+      </div>
       </div>
     </div>
   </mat-sidenav-content>

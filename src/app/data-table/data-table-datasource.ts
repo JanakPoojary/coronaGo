@@ -18,7 +18,7 @@ const EXAMPLE_DATA: DataTableItem[] = [
   {id: 1, name: 'Gujarat', tc:1000, td:201, tr:851},
   {id: 2, name: 'Delhi', tc:1000, td:201, tr:851},
   {id: 3, name: 'Punjab', tc:1000, td:201, tr:851},
-  {id: 4, name: 'Maharashtra', tc:1000, td:201, tr:851},
+  {id: 4, name: 'Kerala', tc:1000, td:201, tr:851},
   {id: 5, name: 'Goa', tc:1000, td:201, tr:851},
   {id: 6, name: 'UP', tc:1000, td:201, tr:851},
   {id: 7, name: 'Bihar', tc:1000, td:201, tr:851},

@@ -12,7 +12,8 @@ const routes: Routes = [
     {path:'',redirectTo:'dashboard',pathMatch:'full'},
     { path: 'dashboard', component: DataTableComponent},
     {path: '', component: LineGraphComponent, outlet:'line-graph'},
-    {path: '', component: PieGraphComponent, outlet:'pie-graph'}
+    {path: '', component: PieGraphComponent, outlet:'pie-graph'},
+    {path: '', component: HomeComponent, outlet:'entry'}
   ]},
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: '**', redirectTo: 'home', pathMatch: 'full' }

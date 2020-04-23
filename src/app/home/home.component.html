@@ -1,23 +1,15 @@
-<div class="bg-dark" style="padding:5px;margin:20px;">
-<h2 class="text-center" style="padding: 5px;">State wise case</h2>
-      <div class='table-responsive'>
-        <table class='table table-dark'>
-          <thead>
-            <tr>
-              <th>State</th>
-              <th>Total Cases</th>
-              <th>Total Recovered</th>
-              <th>Total Death</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Gujarat</td>
-              <td>15000</td>
-              <td>2041</td>
-              <td>257</td>
-            </tr>
-          </tbody>
-        </table>
+<div class="card shadow">
+  <div class="card-body shadow">
+    <h3 class="card-title">COVID 19 STATUS INDIA</h3>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+  <div style="margin-top:1rem;">
+<ngx-charts-number-card 
+  [view]="view"
+  [scheme]="colorScheme"
+  [results]="single"
+  [cardColor]="cardColor"
+  (select)="onSelect($event)">
+</ngx-charts-number-card>
 </div>
 </div>
