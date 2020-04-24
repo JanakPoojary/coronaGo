@@ -13,7 +13,7 @@ export class DataServiceService {
   constructor(private http: HttpClient) { }
   getData():Observable<Apidata[]>{
     return this.http.get<Apidata[]>(this.url).pipe(
-      tap(data => console.log(JSON.parse(JSON.stringify(data)).data.regional)),
+      tap(data => console.log(JSON.parse(JSON.stringify(data)).data)),
       catchError(this.handleError)
     );
   }

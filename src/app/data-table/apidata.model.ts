@@ -1,7 +1,8 @@
 export interface Apidata {
-    state:string,
-    confirmed:number,
-    recovered:number,
-    deaths:number,
-    active:number   
+    loc:string,
+    confirmedCasesIndian: number,
+    discharged: number,
+    deaths: number,
+    confirmedCasesForeign: number,
+    totalConfirmed: number   
 }
