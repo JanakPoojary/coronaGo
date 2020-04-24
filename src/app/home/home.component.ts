@@ -11,14 +11,13 @@ import { Apisum } from '../apisum.model';
 })
 export class HomeComponent implements OnInit {
   e1:Apisum;
-  e2:Apisum;
   errorMessage:string;
 
   ngOnInit(): void {
     this.getData();
   }
   single: any[];
-  view: any[] = [400, 250];
+  view: any[] = [700, 300];
 
   colorScheme = {
     domain: ['#5AA454', '#E44D25', '#CFC0BB', '#7aa3e5', '#a8385d', '#aae3f5']
@@ -47,7 +46,7 @@ export class HomeComponent implements OnInit {
         value: this.e1.confirmedCasesIndian
       },
       {
-        name: "Confirmed Cases Foreign",
+        name: "Confirmed Cases Foreigners",
         value: this.e1.confirmedCasesForeign
       },
       {

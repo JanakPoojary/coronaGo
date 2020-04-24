@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { multi } from './data';
+import { DataServiceService } from '../data-service.service';
 
 
 @Component({
@@ -13,7 +14,7 @@ export class LineGraphComponent implements OnInit {
 
   ngOnInit(): void {
       }
-      multi: any[];
+  multi: any[];
   view: any[] = [500, 300];
 
   // options
@@ -28,11 +29,12 @@ export class LineGraphComponent implements OnInit {
   yAxisLabel: string = 'Cases';
   timeline: boolean = true;
 
+
   colorScheme = {
     domain: ['#FF3333', '#FF33FF', '#CC33FF', '#0000FF', '#33CCFF', '#aae3f5']
   };
 
-  constructor() {
+  constructor(private apidata: DataServiceService) {
     Object.assign(this, { multi });
   }
 

@@ -9,6 +9,7 @@ import { Apidata } from './data-table/apidata.model';
 })
 export class DataServiceService {
   url:string="https://api.rootnet.in/covid19-in/stats/latest";
+  gurl:string="https://pomber.github.io/covid19/timeseries.json";
 
   constructor(private http: HttpClient) { }
   getData():Observable<Apidata[]>{
