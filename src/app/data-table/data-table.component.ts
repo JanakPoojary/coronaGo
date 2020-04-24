@@ -1,8 +1,6 @@
-import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
-import { MatPaginator } from '@angular/material/paginator';
-import { MatSort } from '@angular/material/sort';
-import { MatTable } from '@angular/material/table';
-import { DataTableDataSource, DataTableItem } from './data-table-datasource';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { DataServiceService } from '../data-service.service';
+import { Apidata } from './apidata.model';
 
 @Component({
   selector: 'app-data-table',
@@ -10,22 +8,38 @@ import { DataTableDataSource, DataTableItem } from './data-table-datasource';
   styleUrls: ['./data-table.component.css']
 })
 export class DataTableComponent implements AfterViewInit, OnInit {
-  @ViewChild(MatPaginator) paginator: MatPaginator;
-  @ViewChild(MatSort) sort: MatSort;
-  @ViewChild(MatTable) table: MatTable<DataTableItem>;
-  dataSource: DataTableDataSource;
-
-  /** Columns displayed in the table. Columns IDs can be added, removed, or reordered. */
-  displayedColumns = ['id', 'State', 'Total cases', 'Total Deaths', 'Total Recovered'];
-
+  e1:Array<Apidata>;
+  errorMessage:string;
+  num:number=7;
   ngOnInit() {
-    this.dataSource = new DataTableDataSource();
-    
+    this.getData();
   }
-
+/**
+ *
+ */
+constructor(private apidata: DataServiceService) {
+}
   ngAfterViewInit() {
-    this.dataSource.sort = this.sort;
-    this.dataSource.paginator = this.paginator;
-    this.table.dataSource = this.dataSource;
+  }
+  getData(){
+    this.apidata.getData().subscribe(
+      e1 => {
+        return this.e1 = JSON.parse(JSON.stringify(e1)).data.regional;
+      },
+      error => this.errorMessage = <any>error
+    )
+  }
+  give(n: number) {
+    return this.e1.slice(n-7,n);
+  }
+  next(){
+    if(this.num<=this.e1.length){
+    this.num=this.num+7;
+    }
+  }
+  prev(){
+    if(this.num>7){
+    this.num=this.num-7;
+    }
   }
 }

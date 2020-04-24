@@ -1,3 +1,10 @@
 .full-width-table {
   width: 100%;
 }
+.table{
+  color: white;
+}
+input{
+  color: mediumspringgreen;
+  background-color: #1b1e27;
+}

@@ -20,6 +20,7 @@ import { LineGraphComponent } from './line-graph/line-graph.component';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { PieGraphComponent } from './pie-graph/pie-graph.component';
 import { SocialComponent } from './social/social.component';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { SocialComponent } from './social/social.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     BrowserAnimationsModule,
     MatSidenavModule,
     LayoutModule,
