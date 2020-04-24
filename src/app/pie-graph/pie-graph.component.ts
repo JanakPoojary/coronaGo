@@ -48,11 +48,8 @@ export class PieGraphComponent implements OnInit {
         name: this.e2[i].loc,
         value: this.e2[i].confirmedCasesIndian
       };
-      console.log(this.e1[i].loc);
       this.single.push(person);
     }
-    console.log("---------------------------");
-    console.log(JSON.stringify(this.single));
     this.single=JSON.parse(JSON.stringify(this.single));
   }
   onSelect(event) {
