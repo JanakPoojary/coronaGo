@@ -1,19 +1,19 @@
-<div class="card">
-  <div class="card-body shadow">
+<div class="container">
+<div class="card shadow">
+  <div class="card-body">
     <h3 class="card-title">COVID 19 STATUS INDIA</h3>
     <p class="card-text">Coronavirus disease (COVID-19) is an infectious disease caused by a newly discovered coronavirus.
       Most people who fall sick with COVID-19 will experience mild to moderate symptoms and recover without special treatment.</p>
   <p class="card-text">The first case of the 2019–20 coronavirus pandemic in India was reported on 30 January 2020, originating from China. As of 23 April 2020, 
     the Ministry of Health and Family Welfare have confirmed a total of 21,393 cases, 4,258 recoveries (including 1 migration) and 681 deaths in the country.</p>
     </div>
-  <div style="margin-top:1rem;">
+  <div class="container" style="display: grid;">
 <ngx-charts-number-card 
-(window:resize)="onResize($event)"
-  [view]="view"
   scheme="fire"
   [results]="single"
   [cardColor]="cardColor"
   (select)="onSelect($event)">
 </ngx-charts-number-card>
+</div>
 </div>
 </div>

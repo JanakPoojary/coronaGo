@@ -18,22 +18,22 @@
         mat-icon-button
         (click)="drawer.toggle()"
         *ngIf="isHandset$ | async">
-        <mat-icon aria-label="Side nav toggle icon">CoronaGo</mat-icon>
+        <img src="https://img.icons8.com/color/25/000000/align-justify.png"/>
       </button>
       <span>COVID-19 India</span>
     </mat-toolbar>
     <!-- Add Content Here --> 
     
 
-    <div class="container-fluid home-entry">
-      <div>
-      <div class="row">
-        <router-outlet name="entry"></router-outlet>
-      </div>
-      </div>
       <div class="container design">
         <div class="row">
-          <h2>STATISTICS</h2>
+          <div class="col shadow">
+          <router-outlet name="entry"></router-outlet>
+        </div>
+        </div>
+        
+        <div class="row">
+          <h2 style="padding-top:1rem;margin-top:1rem;">STATISTICS</h2>
         </div>
       <div class="row">
         <div class="col shadow">
@@ -45,12 +45,11 @@
       </div>
       <div class="row">
         <div class="col shadow">
-          <router-outlet name="social"></router-outlet>
-        </div>
-        <div class="col shadow">
           <router-outlet name="pie-graph"></router-outlet>
         </div>
-      </div>
+        <div class="col shadow">
+          <router-outlet name="social"></router-outlet>
+        </div>
       </div>
     </div>
   </mat-sidenav-content>

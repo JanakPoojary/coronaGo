@@ -49,7 +49,4 @@ export class LineGraphComponent implements OnInit {
   onDeactivate(data): void {
     console.log('Deactivate', JSON.parse(JSON.stringify(data)));
   }
-  onResize(event) {
-    this.view = [event.target.innerWidth / 1.35, 400];
-}
 }

@@ -23,6 +23,7 @@ export class PieGraphComponent implements OnInit {
   // options
   showLegend: boolean = true;
   showLabels: boolean = true;
+  animations:boolean=true;
 
   colorScheme = {
     domain: ['#5AA454', '#E44D25', '#CFC0BB', '#7aa3e5', '#a8385d', '#aae3f5']
@@ -42,7 +43,7 @@ export class PieGraphComponent implements OnInit {
   }
   fill(){
     this.e2=this.e1.sort(function(a,b){return a.confirmedCasesIndian-b.confirmedCasesIndian}).reverse();
-    this.e2=this.e2.slice(0,9);
+    this.e2=this.e2.slice(0,6);
     for(var i=0;i<this.e2.length;i++){
       var person = {
         name: this.e2[i].loc,
@@ -56,6 +57,6 @@ export class PieGraphComponent implements OnInit {
     console.log(event);
   }
   onResize(event) {
-    this.view = [event.target.innerWidth / 1.35, 400];
+    this.view = [event.target.innerWidth / 1.5, 400];
 }
 }
