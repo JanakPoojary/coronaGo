@@ -3,7 +3,7 @@
     <h3 class="text-center" style="background-color:mediumspringgreen;padding:5px;margin:5px;color: #1b1e27;">Mounthly Increase in cases</h3>
 </div>
 <div class="container" style="display: grid;">
-<ngx-charts-bar-vertical-stacked class="ngx-charts" style="background-color: #1b1e27;"
+<ngx-charts-heat-map class="ngx-charts" style="background-color: #1b1e27;"
   scheme="neons"
   [legend]="legend"
   legendPosition="below"
@@ -18,6 +18,6 @@
   (activate)="onActivate($event)"
   (deactivate)="onDeactivate($event)"
   >
-</ngx-charts-bar-vertical-stacked>
+</ngx-charts-heat-map>
 </div>
 </div>

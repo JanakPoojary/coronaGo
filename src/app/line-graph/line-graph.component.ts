@@ -36,7 +36,7 @@ export class LineGraphComponent implements OnInit {
 
 
   colorScheme = {
-    domain: ['#FF3333', '#FF33FF', '#CC33FF', '#0000FF', '#33CCFF', '#aae3f5']
+    domain: ['#aae3f5','#33CCFF','#0000FF','#CC33FF','#FF3333', '#FF33FF']
   };
 
   constructor(private apidata: DataServiceService) {
@@ -55,11 +55,11 @@ export class LineGraphComponent implements OnInit {
 
   fill() {
     if (this.e1) {
-      var hello={};
      this.e1=this.e1.sort();
       for (var i = 0; i < this.e1.length; i++) {
         var ddd=[];
-        for (var j = 0; j < 9; j++) {
+        var hello ={};
+        for (var j = 0; j < 5; j++) {
           hello ={
               value: this.e1[i].statewise[j].confirmed,
               name: this.e1[i].statewise[j].state
@@ -74,7 +74,7 @@ export class LineGraphComponent implements OnInit {
           };
         
         this.multi.push(person);
-        i=i+29;
+        i=i+30;
       }
       this.multi = JSON.parse(JSON.stringify(this.multi));
       console.log(this.multi);
