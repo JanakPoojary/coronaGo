@@ -6,3 +6,16 @@ export interface Apidata {
     confirmedCasesForeign: number,
     totalConfirmed: number   
 }
+export interface ApiStateData{
+    day:string,
+    statewise: [
+            {
+                active: number,
+                confirmed: number,
+                deaths: number,
+                recovered: number,
+                state: string
+            }
+            
+        ]
+}

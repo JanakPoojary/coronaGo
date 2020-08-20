@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { multi } from './data';
 import { DataServiceService } from '../data-service.service';
+import { ApiStateData } from '../data-table/apidata.model';
 
 
 @Component({
@@ -11,9 +12,13 @@ import { DataServiceService } from '../data-service.service';
   styleUrls: ['./line-graph.component.css']
 })
 export class LineGraphComponent implements OnInit {
+  e2: Array<ApiStateData>;
+  e1: Array<ApiStateData>;
+  errorMessage: string;
 
   ngOnInit(): void {
-      }
+    this.getStateData();
+  }
   multi: any[];
   view: any[] = [500, 300];
 
@@ -37,7 +42,45 @@ export class LineGraphComponent implements OnInit {
   constructor(private apidata: DataServiceService) {
     Object.assign(this, { multi });
   }
+  getStateData() {
+    this.apidata.getStateWiseData().subscribe(
+      e1 => {
+        this.e1 = JSON.parse(JSON.stringify(e1)).data.history;
+        console.log(this.e1[0].day);
+        this.fill();
+      },
+      error => this.errorMessage = <any>error
+    )
+  }
 
+  fill() {
+    if (this.e1) {
+      var hello={};
+     this.e1=this.e1.sort();
+      for (var i = 0; i < this.e1.length; i++) {
+        var ddd=[];
+        for (var j = 0; j < 9; j++) {
+          hello ={
+              value: this.e1[i].statewise[j].confirmed,
+              name: this.e1[i].statewise[j].state
+          }
+          
+          ddd.push(hello);
+        }
+          console.log(ddd);
+          var person = {
+            name: this.e1[i].day,
+            series: ddd
+          };
+        
+        this.multi.push(person);
+        i=i+29;
+      }
+      this.multi = JSON.parse(JSON.stringify(this.multi));
+      console.log(this.multi);
+    }
+
+  }
   onSelect(data): void {
     console.log('Item clicked', JSON.parse(JSON.stringify(data)));
   }
